@@ -92,6 +92,19 @@ body .loading .loader::after {
   transform: translateY(-150px);
   transition: 0.3s ease-in-out;
 }
+@media (max-width: 900px) {
+  .viewPurchase {
+    width: 45%;
+    right: 25%;
+  }
+}
+@media (max-width: 480px) {
+  .viewPurchase {
+    width: 80%;
+    font-size: 12px;
+    right: 10%;
+  }
+}
 .viewPurchase .check {
   background-color: white;
   height: 30px;
