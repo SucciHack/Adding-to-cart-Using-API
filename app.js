@@ -4,7 +4,7 @@ const productContainer = document.querySelector(".productContainer")
 const loader = document.querySelector(".loader")
 const addToCartBtn = document.getElementById("addToCartBtn")
 const closeCart = document.querySelector("#closeCart")
-
+const viewPurchase = document.querySelector(".viewPurchase")
 const totalAmount = document.getElementById("totalPrice")
 
 addToCartBtn.addEventListener("click", ()=>{
@@ -84,6 +84,10 @@ function pushToCart(image, title, price,description, id){
     localStorage.setItem("cartItems", JSON.stringify(cartArray))
     displayCart(cartArray)
     // console.log(cartArray)
+        viewPurchase.classList.toggle("view")
+        setTimeout(() => {
+            viewPurchase.classList.remove('view');
+          }, 1500);
     calcTotal()
 }
 

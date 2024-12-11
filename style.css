@@ -89,6 +89,8 @@ body .loading .loader::after {
   z-index: 999;
   top: 0;
   right: 35%;
+  transform: translateY(-150px);
+  transition: 0.3s ease-in-out;
 }
 .viewPurchase .check {
   background-color: white;
@@ -103,6 +105,11 @@ body .loading .loader::after {
 .viewPurchase .check i {
   color: black;
   font-size: 2rem;
+}
+
+.view {
+  transform: translateX(0px);
+  animation: viewPurchase 2s forwards; /* Show for 2 seconds */
 }
 
 nav {
