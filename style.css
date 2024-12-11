@@ -78,7 +78,7 @@ body .loading .loader::after {
 
 .viewPurchase {
   text-align: center;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   background: #92eb04;
