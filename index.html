@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>API FETCH</title>
+</head>
+<body>
+    <div class="loading">
+        <span class="loader"></span>
+    </div>
+    <nav>
+        <div class="logo">
+            <h2>S@muel</h2>
+        </div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Projects</a>
+        </div>
+        <button class="btn" id="addToCartBtn"><i class="fa-solid fa-cart-plus"></i></button>
+    </nav>
+    <div class="container">
+        <div class="heading">
+            <h1>Products</h1>
+        </div>
+        <div class="cartFlex">
+            <div class="productContainer">
+            </div>
+            <div class="cart">
+                <div class="head">
+                    <h2>Cart Items</h2>
+                    <button class="btn" id="closeCart"><i class='bx bx-x'></i></button>
+                </div>
+                <div class="products"></div>
+                <center>
+                    <p id="totalPrice">Total: 0.00</p>
+                </center>
+            </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

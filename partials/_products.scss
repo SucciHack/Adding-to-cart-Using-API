@@ -1,0 +1,170 @@
+.container{
+    .heading{
+        width: 80%;
+        margin: auto;
+        padding: 1rem;
+    }
+    .cartFlex{
+        display: flex;
+        justify-content: space-between;
+        // min-height: 80vh;
+        .productContainer{
+            width: 95%;
+            margin:auto;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            gap: 1rem;
+            @media (max-width: 480px) {
+                grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); 
+                width: 100%;
+            }
+            .product{
+                background: transparent;
+                color: $secondary-color;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                @media (max-width: 480px) {
+                    width: 100%;
+                }
+                .content{
+                    padding: 1rem;
+                    p{
+                        font-size: small;
+                    }
+                    .btn{
+                        padding: .5rem 2rem;
+                        margin-top: .5rem;
+                    @media (max-width: 480px) {
+                        padding: .3rem 1rem;
+                    }
+                    }
+                    @media (max-width: 480px) {
+                        font-size: 10px;
+                    } 
+                }
+                .img{
+                    width: 100%;
+                    margin: auto;
+                    img{
+                        width: 100%;
+                        display: block;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .cart{
+            color: $cartColors;
+            background: rgba(255, 255, 255, 0.644);
+            backdrop-filter: blur(3px);
+            min-height: 300px;
+            max-height: 500px;
+            overflow-y: auto;
+            scrollbar-width: 0;
+            border-radius: 20px;
+            width: 40%;
+            margin-right: 10px;
+            position: fixed;
+            right: 0;
+            padding: .5rem;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            transform: translateX(650px);
+            transition: .3s ease-in-out;
+            &::-webkit-scrollbar {
+                width: 8px; // Width of the scrollbar
+            }
+        
+            &::-webkit-scrollbar-track {
+             // Background of the scrollbar track
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background: linear-gradient(to bottom, purple, red); // Thumb color
+                border-radius: 4px; // Optional: Rounded corners for the thumb
+            }
+        
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555; // Darker color when hovered
+            }
+            @media (max-width: 900px) {
+                width: 80%;
+                transform: translateX(800px);
+            }
+            .head{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 2px $secondary-color solid;
+                button{
+                    padding: 0 1rem;
+                    font-size: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: red;
+                    background: transparent;
+                }
+            }
+            .products{
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            @media (max-width: 900px) {
+               grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            .product{
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                    .img{
+                        width: 30%;
+                        img{
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                .content{
+                    width: 60%;
+                    h2{
+                        font-size: 12px;
+                        @media (max-width: 480px) {
+                            font-size: 12px;
+                        }
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                    .price{
+                        font-size: 1.2rem;
+                        font-weight: 800;
+                    }
+                }
+                .btn{
+                    padding: .5rem 2rem;
+                }
+            }     
+        }
+        p{
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        }
+        .visible{
+            transform: translateX(0px);
+            transition: .3s ease-in-out;
+        } 
+    }
+  
+    
+}
+
+
+.lineClamp{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
