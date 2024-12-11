@@ -76,6 +76,35 @@ body .loading .loader::after {
   background: #fcd34d;
 }
 
+.viewPurchase {
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background: #92eb04;
+  width: 25%;
+  margin: auto;
+  padding: 1rem;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 35%;
+}
+.viewPurchase .check {
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.viewPurchase .check i {
+  color: black;
+  font-size: 2rem;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
